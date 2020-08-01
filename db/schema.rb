@@ -10,6 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2020_07_30_182022) do
+
+  create_table "app_component_games", force: :cascade do |t|
+    t.datetime "date"
+    t.string "location"
+    t.integer "first_team_id"
+    t.integer "second_team_id"
+    t.integer "winning_team"
+    t.integer "first_team_score"
+    t.integer "second_team_score"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "app_component_teams", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end
