@@ -5,6 +5,11 @@ This applications follows along Component-based Rails Applications book by Steph
 More information: https://cbra.info/
 
 ## Notes
+### Page 39-40
+Author makes argument for locking down dependencies with specific versions. This is done to ensure there's no drift between what's tested and what's in production.
+
+Question: What happens if components have dependencies on the same gem, but of different versions. Does the component structure ensure there is no interference or namespace collision?.
+
 ### Page 31
 I had no issue running `bin/rails db:drop db:create db:migrate` from the main app.
 
