@@ -4,6 +4,10 @@ This applications follows along Component-based Rails Applications book by Steph
 
 More information: https://cbra.info/
 
+## Notes
+### Page 31
+I had no issue running `bin/rails db:drop db:create db:migrate` from the main app.
+
 ## Issues Encountered
 ### Page 28
 `ArgumentError: Trying to register Bundler::GemfileError for status code 4 but Bundler::GemfileError is already registered`
