@@ -14,6 +14,11 @@ Question: What happens if components have dependencies on the same gem, but of d
 I had no issue running `bin/rails db:drop db:create db:migrate` from the main app.
 
 ## Issues Encountered
+### Page 46-47
+After creating the prediction code and referencing the path helpers, we need to add it to `components/app_component/config/routes.rb`. Otherwise I see `undefined local variable or method `new_prediction_path'` when loading `localhost:3000`.
+
+I've created an [errata ticket](https://github.com/shageman/component-based-rails-applications-book/issues/10) for it.
+
 ### Page 28
 `ArgumentError: Trying to register Bundler::GemfileError for status code 4 but Bundler::GemfileError is already registered`
 
