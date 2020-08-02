@@ -27,7 +27,7 @@ module AppComponent
       @team = Team.new(team_params)
 
       if @team.save
-        redirect_to @team, notice: 'Team was successfully created.'
+        redirect_to teams_url, notice: 'Team was successfully created.'
       else
         render :new
       end
@@ -36,7 +36,7 @@ module AppComponent
     # PATCH/PUT /teams/1
     def update
       if @team.update(team_params)
-        redirect_to @team, notice: 'Team was successfully updated.'
+        redirect_to teams_url, notice: 'Team was successfully updated.'
       else
         render :edit
       end
