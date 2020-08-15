@@ -14,6 +14,8 @@
 
 module AppComponent
   RSpec.describe "/teams", type: :request do
+    include Engine.routes.url_helpers
+
     # Team. As you add validations to Team, be sure to
     # adjust the attributes here as well.
     let(:valid_attributes) {

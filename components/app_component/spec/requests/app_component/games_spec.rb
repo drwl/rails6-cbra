@@ -14,6 +14,8 @@
 
 module AppComponent
   RSpec.describe "/games", type: :request do
+    include Engine.routes.url_helpers
+
     # Game. As you add validations to Game, be sure to
     # adjust the attributes here as well.
     let(:valid_attributes) {
