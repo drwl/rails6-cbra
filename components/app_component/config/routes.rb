@@ -1,6 +1,8 @@
 AppComponent::Engine.routes.draw do
   resources :games
   resources :teams
-  root to: 'welcome#index'
+
+  resource :welcome, only: [:show]
   resource :prediction, only: [:new, :create]
+  root to: 'welcomes#show'
 end
