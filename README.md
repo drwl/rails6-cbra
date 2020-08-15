@@ -5,6 +5,11 @@ This applications follows along Component-based Rails Applications book by Steph
 More information: https://cbra.info/
 
 ## Notes
+### Page 50
+At the start of Chapter 3, the book says to regenerate the project from a script. There's considerable differences between this project and what gets generated due to using Rails 5 versus Rails 6. Notably:
+- Using Request specs and converting Controller specs over - Rails and RSpec team to move towards testing away implementation details in Controllers. https://rspec.info/blog/2016/07/rspec-3-5-has-been-released/#rails-support-for-rails-5
+- Dropping `rails-controller-testing` as a dependency - tl;dr it's provided as a way to support existing codebases with controller tests. It's not needed since we're using request specs. https://github.com/rspec/rspec-rails/issues/1393
+
 ### Page 39-40
 Author makes argument for locking down dependencies with specific versions. This is done to ensure there's no drift between what's tested and what's in production.
 
@@ -14,6 +19,9 @@ Question: What happens if components have dependencies on the same gem, but of d
 I had no issue running `bin/rails db:drop db:create db:migrate` from the main app.
 
 ## Issues Encountered
+### Page 50
+I had trouble getting engine route/url helpers working in request specs, where they seemed to work in controller specs. Refer to https://github.com/rspec/rspec-rails/issues/2368 for more information.
+
 ### Page 46-47
 After creating the prediction code and referencing the path helpers, we need to add it to `components/app_component/config/routes.rb`. Otherwise I see `undefined local variable or method `new_prediction_path'` when loading `localhost:3000`.
 
