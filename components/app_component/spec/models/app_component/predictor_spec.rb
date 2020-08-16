@@ -7,6 +7,7 @@ module AppComponent
       @team2 = create_team name: "B"
       @predictor = AppComponent::Predictor.new([@team1, @team2])
     end
+
     it "predicts teams that have won in the past to win in the future" do
       game = create_game first_team: @team1, second_team: @team2, winning_team: 1
       @predictor.learn([game])
@@ -15,6 +16,7 @@ module AppComponent
       prediction = @predictor.predict(@team1, @team2)
       expect(prediction.winner).to eq @team1
     end
+
     it "changes predictions based on games learned" do
       game1 = create_game first_team: @team1, second_team: @team2, winning_team: 1
       game2 = create_game first_team: @team1, second_team: @team2, winning_team: 2
@@ -23,6 +25,7 @@ module AppComponent
       prediction = @predictor.predict(@team1, @team2)
       expect(prediction.winner).to eq @team2
     end
+
     it "behaves funny when teams are equally strong" do
       prediction = @predictor.predict(@team1, @team2)
       expect(prediction).to be_an AppComponent::Prediction
