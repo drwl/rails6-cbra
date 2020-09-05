@@ -4,7 +4,7 @@ result=0
 
 cd "$( dirname "${BASH_SOURCE[0]}" )"
 
-for test_script in $(find . -name test.sh | sort); do
+for test_script in $(find . -name test.sh -not -path "./node_modules/*" | sort); do
   pushd `dirname $test_script` > /dev/null
   ./test.sh
   ((result+=$?))

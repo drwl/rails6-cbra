@@ -19,6 +19,9 @@ Question: What happens if components have dependencies on the same gem, but of d
 I had no issue running `bin/rails db:drop db:create db:migrate` from the main app.
 
 ## Issues Encountered
+### Page 68
+When running `./build.sh` I ran into permission denied. This was because a node module has a `test.sh` file and the build script was trying to run it. To bypass this I've modified the `build.sh` file to ignore `./node_modules/` directory.
+
 ### Page 50, 60-63
 I had trouble getting engine route/url helpers working in request specs, where they seemed to work in controller specs. Refer to https://github.com/rspec/rspec-rails/issues/2368 for more information.
 
