@@ -5,6 +5,9 @@ This applications follows along Component-based Rails Applications book by Steph
 More information: https://cbra.info/
 
 ## Notes
+### Chapter 3.3 / Page 74
+It goes into asset loading for components and tries to add ZURB to Sportsball. I'm skipping working through this section for now since it looks like it'll be another rabbit hole. A great overview of the differences in Rails 6: https://prathamesh.tech/2019/08/26/understanding-webpacker-in-rails-6/
+
 ### Page 50
 At the start of Chapter 3, the book says to regenerate the project from a script. There's considerable differences between this project and what gets generated due to using Rails 5 versus Rails 6. Notably:
 - Using Request specs and converting Controller specs over - Rails and RSpec team to move towards testing away implementation details in Controllers. https://rspec.info/blog/2016/07/rspec-3-5-has-been-released/#rails-support-for-rails-5
