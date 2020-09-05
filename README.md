@@ -5,8 +5,17 @@ This applications follows along Component-based Rails Applications book by Steph
 More information: https://cbra.info/
 
 ## Notes
+### Chapter 3.6 / Page 90
+On updating dependencies, Stephan says
+> If you are following my advice to lock down dependency versions in your gemspec for external dependencies and if the gem is being used in several (or even many) of the app’s components, this process is not quite as straightforward. Within all components, we will have to update the version and in all of them we have to update the bundle.
+
+Right now, I don't know why a dependency needs to be updated for _all_ components.
+
+In this section, he also gives some tips on handling Rails upgrades.
+
 ### Chapter 3.3 / Page 74
 It goes into asset loading for components and tries to add ZURB to Sportsball. I'm skipping working through this section for now since it looks like it'll be another rabbit hole. A great overview of the differences in Rails 6: https://prathamesh.tech/2019/08/26/understanding-webpacker-in-rails-6/
+- Stephan notes to explicitly install frontend libraries instead of relying on the ruby gem version for various reasons (Page 77-78)
 
 ### Page 50
 At the start of Chapter 3, the book says to regenerate the project from a script. There's considerable differences between this project and what gets generated due to using Rails 5 versus Rails 6. Notably:
