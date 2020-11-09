@@ -5,6 +5,11 @@ This applications follows along Component-based Rails Applications book by Steph
 More information: https://cbra.info/
 
 ## Notes
+### Chapter 3.7
+Discusses another way to structure project files and code, following a keynote by Robert C. Martin (Uncle Bob) https://www.youtube.com/watch?v=WpkDN78P884.
+
+I'm not totally sold on this approach, but will clarify with Stephan on his thoughts in 2020.
+
 ### Chapter 3.6 / Page 90
 On updating dependencies, Stephan says
 > If you are following my advice to lock down dependency versions in your gemspec for external dependencies and if the gem is being used in several (or even many) of the app’s components, this process is not quite as straightforward. Within all components, we will have to update the version and in all of them we have to update the bundle.
